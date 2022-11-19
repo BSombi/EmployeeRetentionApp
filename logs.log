@@ -1,0 +1,193 @@
+2021-09-25 00:04:11,886:INFO:Initializing load_model()
+2021-09-25 00:04:11,886:INFO:load_model(model_name=diamond-pipeline, platform=None, authentication=None, verbose=True)
+2021-09-25 00:06:43,795:INFO:Initializing predict_model()
+2021-09-25 00:06:43,795:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='regression', target='Price')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    target='P...
+                                                                        max_depth=None,
+                                                                        min_child_weight=None,
+                                                                        missing=nan,
+                                                                        monotone_constraints=None,
+                                                                        n_estimators=100,
+                                                                        n_jobs=-1,
+                                                                        num_parallel_tree=None,
+                                                                        random_state=2204,
+                                                                        reg_alpha=None,
+                                                                        reg_lambda=None,
+                                                                        scale_pos_weight=None,
+                                                                        subsample=None,
+                                                                        tree_method='auto',
+                                                                        validate_parameters=None,
+                                                                        verbosity=0),
+                                                 scale_pos_weight=None,
+                                                 subsample=None,
+                                                 tree_method='auto',
+                                                 validate_parameters=None,
+                                                 verbosity=0)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-09-25 00:06:43,805:INFO:Checking exceptions
+2021-09-25 00:06:43,805:INFO:Preloading libraries
+2021-09-25 00:07:50,568:INFO:Initializing predict_model()
+2021-09-25 00:07:50,568:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='regression', target='Price')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    target='P...
+                                                                        max_depth=None,
+                                                                        min_child_weight=None,
+                                                                        missing=nan,
+                                                                        monotone_constraints=None,
+                                                                        n_estimators=100,
+                                                                        n_jobs=-1,
+                                                                        num_parallel_tree=None,
+                                                                        random_state=2204,
+                                                                        reg_alpha=None,
+                                                                        reg_lambda=None,
+                                                                        scale_pos_weight=None,
+                                                                        subsample=None,
+                                                                        tree_method='auto',
+                                                                        validate_parameters=None,
+                                                                        verbosity=0),
+                                                 scale_pos_weight=None,
+                                                 subsample=None,
+                                                 tree_method='auto',
+                                                 validate_parameters=None,
+                                                 verbosity=0)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-09-25 00:07:50,568:INFO:Checking exceptions
+2021-09-25 00:07:50,568:INFO:Preloading libraries
+2021-09-25 00:30:37,409:INFO:Initializing load_model()
+2021-09-25 00:30:37,409:INFO:load_model(model_name=moneymart-pipeline, platform=None, authentication=None, verbose=True)
+2021-09-25 00:35:23,409:INFO:Initializing predict_model()
+2021-09-25 00:35:23,409:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='target')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='target')),
+                ('fix_perfect', Remove_100(target='target')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 GradientBoostingClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-09-25 00:35:23,409:INFO:Checking exceptions
+2021-09-25 00:35:23,409:INFO:Preloading libraries
+2021-09-25 00:57:33,933:INFO:Initializing predict_model()
+2021-09-25 00:57:33,933:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='target')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='target')),
+                ('fix_perfect', Remove_100(target='target')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 GradientBoostingClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-09-25 00:57:33,933:INFO:Checking exceptions
+2021-09-25 00:57:33,933:INFO:Preloading libraries
+2021-09-25 01:05:28,093:INFO:Initializing load_model()
+2021-09-25 01:05:28,094:INFO:load_model(model_name=moneymart_clf, platform=None, authentication=None, verbose=True)
+2021-09-25 01:05:45,682:INFO:Initializing predict_model()
+2021-09-25 01:05:45,682:INFO:predict_model(estimator=RandomForestClassifier(), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-09-25 01:05:45,682:INFO:Checking exceptions
+2021-09-25 01:05:45,682:INFO:Preloading libraries
+2021-09-25 01:05:45,682:ERROR:Pipeline not found. Exception:
+2021-09-25 01:05:45,685:ERROR:Traceback (most recent call last):
+  File "c:\users\benjamin\anaconda3\lib\site-packages\pycaret\internal\tabular.py", line 8545, in predict_model
+    dtypes = prep_pipe.named_steps["dtypes"]
+NameError: name 'prep_pipe' is not defined
+
+2021-09-25 01:12:34,267:INFO:Initializing load_model()
+2021-09-25 01:12:34,267:INFO:load_model(model_name=moneymart-pipeline, platform=None, authentication=None, verbose=True)
+2021-09-25 01:12:41,870:INFO:Initializing predict_model()
+2021-09-25 01:12:41,870:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='target')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='target')),
+                ('fix_perfect', Remove_100(target='target')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 GradientBoostingClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-09-25 01:12:41,870:INFO:Checking exceptions
+2021-09-25 01:12:41,870:INFO:Preloading libraries
+2022-11-19 13:29:12,311:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:29:12,330:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:29:12,331:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:29:12,331:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:29:18,084:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2022-11-19 13:31:39,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:31:39,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:31:39,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:31:39,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 13:31:40,310:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2022-11-19 15:13:19,283:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 15:13:19,299:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 15:13:19,300:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 15:13:19,301:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2022-11-19 15:13:25,338:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
