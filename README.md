@@ -7,6 +7,8 @@ Python version 3.10.6
 
 pip install streamlit
 
+streamlit_pandas_profiling
+
 pip install uvicorn
 
 pip install pycaret
