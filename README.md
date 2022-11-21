@@ -1,9 +1,12 @@
-# Loan Application Scoring Model
-loan application scoring model for first time applicants.
+# Employee Retention Prediction App
+The app can predict the probability of an employee leaving the organisation.
 
-Python version 3.8.8
+Python version 3.10.6
 
 ## Model Dependencies
+
+pip install streamlit
+
 pip install uvicorn
 
 pip install pycaret
