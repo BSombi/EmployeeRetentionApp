@@ -40,17 +40,9 @@ moneymart_first = pd.read_csv(r'moneymart_cleaned.csv',encoding="utf8")
 
 df1 = moneymart_first.copy()
 target = 'target'
-#encode = ['Final_branch','Gender','Marital_Status','House','Loan_Type','Fund','Loan_Purpose','Client_Type',
- #         'Client_Classification','Currency','Interest_Calculated_in_Period','Repayment_Frequency_Period']
-
 
 df = pd.get_dummies(df1, columns = ['Final_branch','Gender','Marital_Status','House','Loan_Type','Fund','Loan_Purpose','Client_Type',
           'Client_Classification','Currency','Interest_Calculated_in_Period','Repayment_Frequency_Period'])
-
-#for col in encode:
- #   dummy = pd.get_dummies(df[col], prefix=col)
- #   df = pd.concat([df,dummy], axis=1)
- #   del df[col]
 
 target_mapper = {'Default':0, 'Non-Default':1}
 def target_encode(val):
@@ -59,26 +51,12 @@ def target_encode(val):
 df['target'] = df['target'].apply(target_encode)
 
 # Replace the N/a class with class 'missing'
-#df['Final_branch'] = np.where(df['Final_branch'].isnull(), 'not specified', df['Final_branch'])
-#df['Client_Account_No'] = np.where(df['Client_Account_No'].isnull(), '0', df['Client_Account_No'])
 df['Highest_Sales'] = np.where(df['Highest_Sales'].isnull(), '0', df['Highest_Sales'])
 df['Lowest_Sales'] = np.where(df['Lowest_Sales'].isnull(), '0', df['Lowest_Sales'])
 df['Average_Sales'] = np.where(df['Average_Sales'].isnull(), '0', df['Average_Sales'])
-#df['Gender'] = np.where(df['Gender'].isnull(), 'not specified', df['Gender'])
-#df['Marital_Status'] = np.where(df['Marital_Status'].isnull(), 'not specified', df['Marital_Status'])
 df['BirthMonth'] = np.where(df['BirthMonth'].isnull(), '0', df['BirthMonth'])
 df['Age'] = np.where(df['Age'].isnull(), '0', df['Age'])
-#df['House'] = np.where(df['House'].isnull(), 'not specified', df['House'])
-#df['Loan_Type'] = np.where(df['Loan_Type'].isnull(), 'not specified', df['Loan_Type'])
-#df['Fund'] = np.where(df['Fund'].isnull(), 'not specified', df['Fund'])
-#df['Loan_Purpose'] = np.where(df['Loan_Purpose'].isnull(), 'not specified', df['Loan_Purpose'])
-#df['Client_Type'] = np.where(df['Client_Type'].isnull(), 'not specified', df['Client_Type'])
-#df['Client_Classification'] = np.where(df['Client_Classification'].isnull(), 'not specified', df['Client_Classification'])
-#df['Currency'] = np.where(df['Currency'].isnull(), 'not specified', df['Currency'])
-#df['principal_amount'] = np.where(df['principal_amount'].isnull(), 'not specified', df['principal_amount'])
 df['Expected_No_Repayments'] = np.where(df['Expected_No_Repayments'].isnull(), '0', df['Expected_No_Repayments'])
-#df['Interest_Calculated_in_Period'] = np.where(df['Interest_Calculated_in_Period'].isnull(), 'not specified', df['Interest_Calculated_in_Period'])
-#df['Repayment_Frequency_Period'] = np.where(df['Repayment_Frequency_Period'].isnull(), 'not specified', df['Repayment_Frequency_Period'])
 df['Month_Borrowed'] = np.where(df['Month_Borrowed'].isnull(), '0', df['Month_Borrowed'])
 df['Quarter_Borrowed'] = np.where(df['Quarter_Borrowed'].isnull(), '0', df['Quarter_Borrowed'])
 df['Days_to_RePurchase'] = np.where(df['Days_to_RePurchase'].isnull(), '0', df['Days_to_RePurchase'])
@@ -124,9 +102,7 @@ def predict(data : request_body):
     ]]
     features = pd.DataFrame(test_data, index=[0])
     #return features
-    
-    #input_df = predict()
-    
+        
     # Combines user input features with entire loans dataset
     # This will be useful for the encoding phase
     moneymart_raw = pd.read_csv(r'C:\Users\Benjamin\Documents\Benjamin\Benjamin Sombi Docs\D\Dreatol Fintech Material\StreamLit App\Moneymart App\moneymart_cleaned.csv')
@@ -134,7 +110,6 @@ def predict(data : request_body):
     df2 = pd.concat([features,moneymart],axis=0)
 
    # Encoding of ordinal features
-   # https://www.kaggle.com/pratik1120/penguin-dataset-eda-classification-and-clustering
     encode = ['Final_branch','Gender','Marital_Status','House','Loan_Type','Fund','Loan_Purpose','Client_Type',
           'Client_Classification','Currency','Interest_Calculated_in_Period','Repayment_Frequency_Period']
     for col in encode:
@@ -142,9 +117,6 @@ def predict(data : request_body):
       df2 = pd.concat([df2,dummy], axis=1)
       del df2[col]
     df2 = df2[:1] # Selects only the first row (the user input data)
-    
-    #predict_data = pd.get_dummies(df2, columns = ['Final_branch','Gender','Marital_Status','House','Loan_Type','Fund','Loan_Purpose','Client_Type',
-     #     'Client_Classification','Currency','Interest_Calculated_in_Period','Repayment_Frequency_Period'])
            
       
     # Predicting the Class
