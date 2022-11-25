@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-#from sklearn.ensemble import RandomForestClassifier
 from streamlit_pandas_profiling import st_profile_report
 from pycaret.classification import *
-#import mitosheet
 
 
 st.write("""
@@ -56,7 +54,6 @@ ipc = ipc_raw.drop(columns=['Attrition','YearsSinceLastPromotion', 'PerformanceR
 df = pd.concat([input_df,ipc],axis=0)
 
 # Encoding of ordinal features
-
 encode = ['BusinessTravel','Department','EducationField','EnvironmentSatisfaction','OverTime','JobRole',
           'MaritalStatus']
 for col in encode:
@@ -70,14 +67,12 @@ df = df[:1] # Selects only the first row (the user input data)
 load_clf = pickle.load(open('ipc_clf.pkl', 'rb'))
 
 
-
-#if st.button('Predict'):
 prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df).max()
     
 col1, col2 = st.columns(2)
     
-    #Display Prediction Results
+# Display Prediction Results
 with col1:
     st.subheader('Prediction')
     if prediction == 0:
@@ -87,36 +82,7 @@ with col1:
     
 with col2:
     st.subheader('Prediction Probability')
-#st.write(prediction_proba)
     if prediction == 0:
        st.write('The Probability of the employee staying within the organisation is', "{:.0%}".format(prediction_proba))
     else:
        st.write('The Probability of the employee leaving the organisation is',"{:.0%}".format(prediction_proba))
-
-
-
-
-#mitosheet.sheet()
-
-#profile = ProfileReport(ipc_raw,
-
-#                        title="Employee Retention Data",
-
-#        dataset={
-#        dataset={
-
-#        "description": "This profiling report was generated for IPC Employee Retention Demo Data",
-
-#        "copyright_holder": "IPC",
-
-#        "copyright_year": "2021",
-
-#    }
-
-#)
-
-#st.title("Detailed Report of the Data Used")
-
-#st.write(ipc_raw)
-
-#st_profile_report(profile)    
